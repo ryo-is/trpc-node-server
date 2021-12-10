@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@acall-inc'
+          scope: '@ryo-is'
       - run: yarn
       - run: chmod u+x version-up.sh
       - name: replace version
