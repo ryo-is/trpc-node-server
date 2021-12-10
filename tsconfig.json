@@ -4,15 +4,10 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "target": "ES2019",
-    "lib": [
-      "ES2019",
-      "dom"
-    ],
+    "lib": ["ES2019", "dom"],
     "baseUrl": ".",
     "paths": {
-      "src/*": [
-        "src/*"
-      ],
+      "src/*": ["src/*"]
     },
     "outDir": "./dist",
     "moduleResolution": "node",
@@ -25,11 +20,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
+    "declaration": true,
+    "emitDeclarationOnly": true
   },
-  "include": [
-    "src/**/*",
-  ],
-  "exclude": [
-    "node_modules",
-  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
