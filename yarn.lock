@@ -57,14 +57,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@ryo-is/trpc-server@0.0.1":
-  version "0.0.1"
-  resolved "https://npm.pkg.github.com/download/@ryo-is/trpc-server/0.0.1/3d6c8280665780c4df618dcf2cd2fb595434692e7825e8f8bc5204b4c0a15451#a5cf85a0626e88587c71d47dbbc0a18ed700e8ef"
-  integrity sha512-wTU1/ncqPtCb1Zo4xFfiorxpCh6UhoWPM1oR9ogJI0RaNkGfNqKMuJ5zW6fKoqGfhB1qJPFRxZz3/4Bogu9uiA==
-  dependencies:
-    cors "^2.8.5"
-    express "^4.17.1"
-
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz"
