@@ -1,5 +1,5 @@
 {
-  "name": "trpc-server",
+  "name": "@ryo-is/trpc-server",
   "version": "1.0.0",
   "dependencies": {
     "cors": "^2.8.5",
@@ -29,7 +29,7 @@
   },
   "publishConfig": {
     "access": "restricted",
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/ryo-is"
   },
   "scripts": {
     "dev": "nodemon dist/index.js & webpack --config webpack.config.js -w",
