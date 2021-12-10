@@ -1,6 +1,6 @@
 {
   "name": "@ryo-is/trpc-server",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
     "@ryo-is/trpc-server": "0.0.1",
     "cors": "^2.8.5",
