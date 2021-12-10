@@ -27,6 +27,7 @@ jobs:
       - run: yarn tsc
       - run: |
           TAG=$(echo ${{ github.ref }} | sed -e "s#refs/heads/##g")
+          echo $TAG
           yarn publish --tag ${TAG}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
