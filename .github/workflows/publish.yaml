@@ -24,7 +24,7 @@ jobs:
       - run: chmod u+x version-up.sh
       - name: replace version
         run: export v=$(git describe --tags) && ./version-up.sh
-      - run: yarn build
+      - run: yarn tsc
       - run: |
           TAG=$(echo ${{ github.ref }} | sed -e "s#refs/heads/##g")
           yarn publish --tag ${TAG}
