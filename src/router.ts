@@ -19,18 +19,27 @@ const createRouter = () => {
   return trpc.router<Context>();
 };
 
-export const appRouter = createRouter().query('hello', {
-  input: z
-    .object({
-      text: z.string().nullish(),
-    })
-    .nullish(),
-  resolve({ input, ctx }) {
-    return {
-      greeting: `hello ${input?.text ?? 'world'}`,
-      authorization: `token is ${ctx.authorization}`,
-    };
-  },
-});
+export const appRouter = createRouter()
+  .query('hello', {
+    input: z
+      .object({
+        text: z.string().nullish(),
+      })
+      .nullish(),
+    resolve({ input, ctx }) {
+      return {
+        greeting: `hello ${input?.text ?? 'world'}`,
+        authorization: `token is ${ctx.authorization}`,
+      };
+    },
+  })
+  .mutation('mutation', {
+    input: z.object({
+      text: z.string(),
+    }),
+    resolve() {
+      return {};
+    },
+  });
 
 export type AppRouter = typeof appRouter;
