@@ -4,15 +4,12 @@ import * as trpcExpress from '@trpc/server/adapters/express';
 
 export const createContext = ({
   req,
-  res,
 }: trpcExpress.CreateExpressContextOptions) => {
   const getAuthorization = () => {
     return req.headers.authorization || '';
   };
 
   return {
-    req,
-    res,
     authorization: getAuthorization(),
   };
 };
@@ -28,9 +25,10 @@ export const appRouter = createRouter().query('hello', {
       text: z.string().nullish(),
     })
     .nullish(),
-  resolve({ input }) {
+  resolve({ input, ctx }) {
     return {
       greeting: `hello ${input?.text ?? 'world'}`,
+      authorization: `token is ${ctx.authorization}`,
     };
   },
 });
